@@ -24,6 +24,10 @@ html {
     margin-left: -8px;
 }
 
+.col {
+    margin: 0 8px;
+}
+
 #section {
     max-width: 900px;
     margin-left: auto;
@@ -33,6 +37,20 @@ html {
 
 .mt-16 {
     margin-top: 16px !important;
+}
+
+.mt-56 {
+    margin-top: 56px !important;
+}
+
+.space-between {
+    width: 70%;
+    height: 2px;
+    background-color: #0a3c53;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    border-radius: 50%;
 }
 
 /* main */
@@ -94,8 +112,13 @@ html {
 #nav .subnav a {
     color: #000;
     line-height: 38px;
-    padding: 0 12px;
-    min-width: 160px;
+    padding: 5px 12px;
+    min-width: 170px;
+    border-bottom: 1px solid #ccc;
+}
+
+#nav .subnav li:last-child a {
+    border-bottom: none;
 }
 
 #nav li:hover .subnav {
@@ -216,6 +239,52 @@ html {
    filter: saturate(1.3);
 }
 
+/* Video */
+
+hr {
+    margin: 3px auto;
+}
+
+.video-heading {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: #5f9ea0;
+    margin-bottom: 50px;
+    text-shadow: 1px 2px #ccc;
+}
+
+.video-box {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.video-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-name {
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: Helvetica;
+    font-weight: 800;
+}
+
+.video {
+    width: 70%;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+
+.video-items img {
+    position: absolute;
+    width: 15%;
+    top: calc(100%/2.5);
+}
+
 /* Tour Section */
 
 .tour-section {
@@ -308,7 +377,7 @@ html {
 }
 
 .btn-buy-ticket:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.87);
     color: #fff;
     cursor: pointer;
 }
@@ -332,7 +401,7 @@ html {
 
 .contact-info li > a {
     text-decoration: none;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .contact-info li > a:hover {
