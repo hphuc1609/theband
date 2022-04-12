@@ -43,15 +43,6 @@ html {
     margin-top: 56px !important;
 }
 
-.space-between {
-    width: 70%;
-    height: 2px;
-    background-color: #888;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 32px;
-}
-
 /* main */
 #header {
     position: fixed;
@@ -209,10 +200,13 @@ html {
 }
 
 #content .member-list {
+    display: flex;
     text-align: center;
     overflow: hidden;
     margin-top: 47px;
     justify-items: center;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
 }
 
 #content .member-item {
@@ -232,7 +226,7 @@ html {
 #content .member-group {
     width: 100%;
     border-radius: 4px;
-    box-shadow: 1px 2px 5px #888;
+    box-shadow: 5px 5px 8px #888;
 }
 
 .member-group:hover{
@@ -242,7 +236,11 @@ html {
 /* Video */
 
 hr {
-    margin: 3px auto;
+    margin-top: 3px;
+}
+
+.video-section {
+    margin-top: 32px;
 }
 
 .video-heading {
@@ -250,40 +248,53 @@ hr {
     letter-spacing: 2px;
     font-size: 30px;
     color: #5f9ea0;
-    margin-bottom: 50px;
     text-shadow: 1px 2px #ccc;
 }
 
 .video-box {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
     text-align: center;
-    margin-bottom: 15px;
 }
 
 .video-items {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
 }
 
 .video-name {
-    font-size: 17px;
+    font-size: 20px;
     letter-spacing: 1px;
     font-family: Helvetica;
     font-weight: 800;
 }
 
 .video {
-    min-width: 400px;
-    max-width: 700px;
+    width: 100%;
     margin-top: 15px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
-.video-items img {
-    position: absolute;
-    width: 15%;
-    top: calc(100%/2.5);
+.video-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px
+}
+
+.video-link a {
+    text-decoration: none;
+    color: rgb(37, 73, 192);
+    margin-left: 10px;
+}
+
+.video-link a:active {
+    color: red;
+}
+
+.video-link i {
+    color: #333;
 }
 
 /* Tour Section */

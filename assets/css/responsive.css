@@ -24,6 +24,7 @@
     .btn-send {
         padding: 15px 0;
     }
+    
 }
 
 /* Tablet */
@@ -86,4 +87,9 @@
     .contact-form {
         margin-top: 32px;
     }
+
+    .video-heading {
+        font-size: 1.4rem;
+    }
+
 }
