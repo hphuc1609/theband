@@ -10,7 +10,7 @@
     }
 
     .btn-buy-ticket {
-        padding: 15px 16px;
+        padding: 13px 16px;
     }
     
     .contact-info li {
@@ -22,9 +22,12 @@
     }
 
     .btn-send {
-        padding: 15px 0;
+        padding: 13px 0;
     }
     
+    #footer .copy-right {
+        font-size: 13px;
+    }
 }
 
 /* Tablet */
@@ -68,6 +71,10 @@
         width: 414px;
     }
 
+    #nav li a {
+        font-size: 13px;
+    }
+
     .search {
         display: none;
     }
@@ -84,12 +91,25 @@
         width: 100%;
     }
 
+    .ticket-list,
+    .place-item .place-text {
+        font-size: 13px;
+    }
+
     .contact-form {
         margin-top: 32px;
     }
 
     .video-heading {
-        font-size: 1.4rem;
+        font-size: 18px;
     }
 
+    .video-name {
+        font-size: 15px;
+    }
+
+    .video-link a,
+    .video-link i {
+        font-size: 11px;
+    }
 }

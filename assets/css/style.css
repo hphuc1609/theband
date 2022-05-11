@@ -126,10 +126,14 @@ html {
     position: absolute;
     top: 0;
     right: 0;
+    line-height: var(--height);
+    padding: 0 20px;
     display: none;
+    background-color: #e8e8e8;
+    color: #202020;
 }
 
-.search, .mobile-menu-btn {
+.search {
     float: right;
     color: #fff;
     font-size: 14.5px;
@@ -141,12 +145,6 @@ html {
     background-color: #0a3c53;
     cursor: pointer;
 }
-
-.mobile-menu-btn:hover {
-    background-color: #ccc;
-    color: #000;
-}
-
 
 #slider {
     position: relative;
@@ -225,8 +223,8 @@ html {
 
 #content .member-group {
     width: 100%;
-    border-radius: 4px;
-    box-shadow: 5px 5px 8px #888;
+    border-radius: 3px;
+    box-shadow: 5px 7px 5px #DCDCDC;
 }
 
 .member-group:hover{
@@ -248,7 +246,6 @@ hr {
     letter-spacing: 2px;
     font-size: 30px;
     color: #5f9ea0;
-    text-shadow: 1px 2px #ccc;
 }
 
 .video-box {
@@ -273,24 +270,21 @@ hr {
 .video {
     width: 100%;
     margin-top: 15px;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 
 .video-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 8px
 }
 
 .video-link a {
     text-decoration: none;
     color: rgb(37, 73, 192);
-    margin-left: 10px;
+    margin-left: 3px;
 }
 
 .video-link a:active {
-    color: red;
+    color: #ed0048;
 }
 
 .video-link i {
@@ -385,7 +379,7 @@ hr {
     color: #ffff;
     display: inline-block;
     border: none;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .btn-buy-ticket:hover {
@@ -440,7 +434,7 @@ hr {
 .contact-form .form-control {
     padding: 10px;
     border: 1px solid #ccc;
-    font-size: 15px;
+    font-size: 13px;
     width: 100%;
 }
 
@@ -453,7 +447,7 @@ hr {
     background: #000;
     color: #fff;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .btn-send:hover {
@@ -513,6 +507,17 @@ hr {
     min-height: 200px;
     max-width: calc(100% - 32px);
     animation: modalFadeIn ease-out 0.4s;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0.2;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .modal-header {
@@ -601,14 +606,3 @@ input.modal-input {
     color: #009688;
 }
 
-/* Key frames */
-@keyframes modalFadeIn {
-    from {
-        opacity: 0.2;
-        transform: translateY(-200px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
