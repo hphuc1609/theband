@@ -2,12 +2,12 @@ const modal = document.querySelector('.js-modal');
 const modalClose = document.querySelector('.js-modal-close');
 const btnClose = document.querySelector('.js-btn-close');
 
-// Hàm hiển thị modal buy ticket (thêm class open vào modal)
+// Hàm hiển thị modal buy ticket
 function Showbuyticket() {
     modal.classList.add('open');
 }
 
-// Hàm ẩn modal buy ticket (gỡ bỏ class open của modal)
+// Hàm ẩn modal buy ticket
 function Hidebuyticket() {
     modal.classList.remove('open');
 }
@@ -28,7 +28,6 @@ const modalContainer = document.querySelector('.js-modal-container');
 modalContainer.addEventListener('click', function (event) {
     event.stopPropagation();
 })
-
 
 // Hàm đóng/mở menu-mobile
 var header = document.getElementById('header');
@@ -59,4 +58,42 @@ for (var i = 0; i < menuItems.length; i++) {
             header.style.height = null; // Nếu sai thì đóng menu
         }
     }
+}
+
+// Chuyển slide
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
 }

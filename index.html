@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTS | HYBE MUSIC</title>
-    <link rel="shortcut icon" href="assets/logo/fav-bts.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/fonts-icon/fontawesome-free-6.0.0-web/css/all.css">
+    <link rel="shortcut icon" href="./assets/logo/fav-bts.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts-icon/fontawesome-free-6.0.0-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
@@ -37,18 +38,40 @@
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            
+
             <!-- Mobile menu button -->
             <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div id="slider">
-            <div class="slider-text text-white">
-                <h2>Los Angeles</h2>
-                <p>We had the best time burning at SOFI Stadium !</p>
+            <div class="mySlides">
+                <img src="./assets/slider/bts/slider1.png" alt="">
+                <div class="text">
+                    <h2>Paradise</h2>
+                    <p>Whatever, big or small, you are you after all</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <img src="./assets/slider/bts/slider2.jpg" alt="">
+                <div class="text">
+                    <h2>Not Today</h2>
+                    <p>If you can't fly, then run. Today we will survive</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <img src="./assets/slider/bts/slider3.jpg" alt="">
+                <div class="text">
+                    <h2>WooJiHwa</h2>
+                    <p>We will always together forever</p>
+                </div>
             </div>
 
+            <div class="box-dot" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+              </div>
         </div>
         <div id="content">
             <!-- Section About -->
@@ -56,17 +79,16 @@
                 <div id="section">
                     <h1 class="section-heading">BTS</h1>
                     <p class="section-sub-heading">We believe music</p>
-                    <p class="text-about">BTS, còn được gọi là Bangtan Boys, là một nhóm nhạc nam Hàn Quốc được thành
-                        lập vào năm 2010 và ra mắt vào năm 2013 bởi Big Hit Entertainment. Nhóm bao gồm 7 thành viên:
-                        Jin, Suga, J-Hope, RM, Jimin, V và Jungkook. Các thành viên đồng sáng tác và sản xuất cho phần
-                        lớn các sản phẩm âm nhạc của họ.</p>
-                    <p class="text-about">Câu nói nổi tiếng của BTS là “WooJiHwa”. WooJiHwa là viết tắt của “WooRi
-                        HamKkaeHaNeun JiGeum,
-                        HwaYangYeonHwa.”, có nghĩa là “Thời gian chúng ta bên nhau là khoảng thời gian hạnh phúc nhất
-                        cuộc đời”. HwaYangYeonHwa là cụm từ tiếng Trung 4 chữ dùng để biểu đạt đang ở thời điểm hạnh
-                        phúc nhất trong đời và cũng là tên mini album làm nên tên tuổi của BTS. Thật sự vô cùng ý nghĩa!
-                        Và để đáp lại, ARMY (tên fandom của BTS) đã trích dẫn câu nói “Mãi mãi là khán giả của các anh”
-                        để thể hiện lòng trung thành đối với các oppa BTS!</p>
+                    <p class="text-about">BTS, also known as Bangtan Boys, is a South Korean boy band formed in 2010 and
+                        debuted in 2013 by Big Hit Entertainment. The group consists of 7 members: Jin, Suga, J-Hope,
+                        RM, Jimin, V and Jungkook. The members co-wrote and produced most of their music. <br>
+
+                        The famous saying of BTS is “WooJiHwa”. WooJiHwa stands for "WooRi HamKkaeHaNeun JiGeum,
+                        HwaYangYeonHwa.", which means "The time we spent together is the happiest time of my life".
+                        HwaYangYeonHwa is a 4-letter Chinese phrase used to express being at the happiest moment in life
+                        and is also the name of the mini-album that made BTS's name. It really makes a lot of sense! And
+                        in response, ARMY (BTS's fandom name) quoted the saying "Forever your audience" to show their
+                        loyalty to BTS oppas!.</p>
 
                     <div class="member-list">
                         <div class="member-item">
@@ -101,11 +123,12 @@
                     <hr>
                     <hr>
                     <div class="video-section">
-                        <h2 class="video-heading mt-16">HOT SONGS - BILLBOARD</h2>
+                        <h2 class="video-heading mt-16">HOT SONGS IN BILLBOARD</h2>
                         <div class="video-box">
                             <div class="video-items col mt-56">
                                 <h2 class="video-name">No.1 Butter</h2>
-                                <video id="video-band" class="video" poster="./assets/video/poster/poster1.jpg" controls>
+                                <video id="video-band" class="video" poster="./assets/video/poster/poster1.jpg"
+                                    controls>
                                     <source src="./assets/video/Butter.mp4" type="video/mp4">
                                     Your browser does not support mp4 videos !
                                 </video>
@@ -117,7 +140,8 @@
                             </div>
                             <div class="video-items col mt-56">
                                 <h2 class="video-name">No.2 My Universe</h2>
-                                <video id="video-band" class="video" poster="./assets/video/poster/poster2.jpg" controls>
+                                <video id="video-band" class="video" poster="./assets/video/poster/poster2.jpg"
+                                    controls>
                                     <source src="./assets/video/My_Universe.mp4" type="video/mp4">
                                     Your browser does not support mp4 videos !
                                 </video>
@@ -129,7 +153,8 @@
                             </div>
                             <div class="video-items col mt-56">
                                 <h2 class="video-name">No.3 Dynamite</h2>
-                                <video id="video-band" class="video" poster="./assets/video/poster/poster3.jpg" controls>
+                                <video id="video-band" class="video" poster="./assets/video/poster/poster3.jpg"
+                                    controls>
                                     <source src="./assets/video/Dynamite.mp4" type="video/mp4">
                                     Your browser does not support mp4 videos !
                                 </video>
@@ -157,7 +182,8 @@
                     </ul>
                     <div class="place-list ">
                         <div class="place-item s-col-full mt-16">
-                            <img src="./assets/img/tour-items/tour1.jpg" title="Chicago" alt="Chicago" class="place-img">
+                            <img src="./assets/img/tour-items/tour1.jpg" title="Chicago" alt="Chicago"
+                                class="place-img">
                             <div class="place-text">
                                 <h3 class="place-heading">Chicago</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
@@ -175,7 +201,8 @@
                             </div>
                         </div>
                         <div class="place-item s-col-full mt-16">
-                            <img src="./assets/img/tour-items/tour3.png" title="San Francisco" alt="San Francisco" class="place-img">
+                            <img src="./assets/img/tour-items/tour3.png" title="San Francisco" alt="San Francisco"
+                                class="place-img">
                             <div class="place-text">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
@@ -196,8 +223,10 @@
                         <div class="contact-info s-col-full">
                             <ul>
                                 <li><i class="fa-solid fa-location-dot"></i>Seoul, Korean</li>
-                                <li><i class="fa-solid fa-phone"></i>Phone: <a href="tel: +07 797977">+07 797977</a></li>
-                                <li><i class="fa-solid fa-envelope"></i>Email: <a href="mailto: email@mail.com">Email@mail.com</a></li>
+                                <li><i class="fa-solid fa-phone"></i>Phone: <a href="tel: +07 797977">+07 797977</a>
+                                </li>
+                                <li><i class="fa-solid fa-envelope"></i>Email: <a
+                                        href="mailto: email@mail.com">Email@mail.com</a></li>
                             </ul>
                         </div>
                         <div class="contact-form s-col-full">
@@ -260,13 +289,13 @@
                             Tickets, $15 per person
                         </label>
                         <input id="form-tickets" type="text" required class="modal-input" placeholder="How many?">
-                        
+
                         <label for="form-mail" class="modal-label">
                             <i class="fa-solid fa-user"></i>
                             Send To
                         </label>
-                        <input id="form-mail" type="email" required  class="modal-input" placeholder="Enter email">
-    
+                        <input id="form-mail" type="email" required class="modal-input" placeholder="Enter email">
+
                         <button id="btn-pay"> PAY
                             <i class="fa-solid fa-check"></i>
                         </button>
@@ -277,7 +306,8 @@
                         Close
                         <i class="fa-solid fa-xmark"></i>
                     </button>
-                    <p class="modal-hepl">Need <a href="https://www.facebook.com/BIGHIT.MUSIC" target="blank">help?</a></p>
+                    <p class="modal-hepl">Need <a href="https://www.facebook.com/BIGHIT.MUSIC" target="blank">help?</a>
+                    </p>
                 </footer>
 
             </div>

@@ -35,12 +35,20 @@
     .btn-send {
         width: 28%;
     }
+
+    #slider img {
+        height: 500px;
+    }
 }
 
 /* Mobile */
 @media (max-width: 46.1875em) {
     .s-col-full, .s-full-width {
         width: 100% !important;
+    }
+
+    #slider img {
+        height: 300px;
     }
 
     #header {
