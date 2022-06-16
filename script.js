@@ -1,6 +1,30 @@
 const modal = document.querySelector('.js-modal');
 const modalClose = document.querySelector('.js-modal-close');
 const btnClose = document.querySelector('.js-btn-close');
+const btnTop = document.querySelector('.arrow-up');
+
+// Chuyển slide
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
 
 // Hàm hiển thị modal buy ticket
 function Showbuyticket() {
@@ -60,40 +84,11 @@ for (var i = 0; i < menuItems.length; i++) {
     }
 }
 
-// Chuyển slide
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {
-        slideIndex = 1
+// Xử lý scroll Top khi nhấn nút button top
+window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 1000) {
+        btnTop.classList.add('active');
+    } else {
+        btnTop.classList.remove('active');
     }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-    setTimeout(showSlides, 5000); // Change image every 2 seconds
-}
+})

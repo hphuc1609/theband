@@ -47,7 +47,7 @@
         width: 100% !important;
     }
 
-    #slider img {
+    #slider .mySlides img {
         height: 300px;
     }
 
@@ -119,5 +119,11 @@
     .video-link a,
     .video-link i {
         font-size: 11px;
+    }
+
+    .arrow-up {
+        width: 40px;
+        height: 40px;
+        right: 15px;
     }
 }
